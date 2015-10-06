@@ -1,0 +1,8 @@
+CREATE TABLE `chat` (
+  `_id` int(11) NOT NULL AUTO_INCREMENT,
+  `author` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `client` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `data` bigint(20) NOT NULL,
+  `text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`_id`)
+)

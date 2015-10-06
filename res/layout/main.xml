@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Spinner
+        android:id="@+id/spinner_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinner_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/open_chat_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="open_chat" />
+
+    <Button
+        android:id="@+id/open_chat_reverce_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="open_chat_reverce" />
+
+    <Button
+        android:id="@+id/delete_server_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="delete_server_chats"
+        android:text="Удалить все чаты на сервере!" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="delete_local_chats"
+        android:text="Удалить все чаты на этом устройстве!" />
+
+</LinearLayout>

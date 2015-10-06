@@ -1,0 +1,14 @@
+.classpath
+bin/
+.project
+gen/
+libs/
+project.properties
+proguard-project.txt
+res/values-v11/
+res/values-v14/styles.xml
+res/values/strings.xml
+res/drawable-hdpi/ic_launcher.png
+res/drawable-mdpi/ic_launcher.png
+res/drawable-xhdpi/ic_launcher.png
+res/values/styles.xml
