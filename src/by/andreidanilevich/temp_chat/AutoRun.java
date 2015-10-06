@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-public class AutoRun extends BroadcastReceiver {
+public class AutoRun extends BroadcastReceiver { // автостарт
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
