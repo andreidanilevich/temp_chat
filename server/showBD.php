@@ -1,9 +1,9 @@
 ﻿<?php // сохранить utf-8 !
 // -------------------------------------------------------------------------- логины пароли
-$mysql_host = "mysql5.000webhost.com";
-$mysql_database = "a6805356_chat";
-$mysql_user = "a6805356_user";
-$mysql_password = "123pass";
+$mysql_host = "localhost"; // sql сервер
+$mysql_user = "l29340eb_chat"; // пользователь
+$mysql_password = "123456789"; // пароль
+$mysql_database = "l29340eb_chat"; // имя базы данных chat
 // -------------------------------------------------------------------------- если база недоступна
 if (!mysql_connect($mysql_host, $mysql_user, $mysql_password)){
 	
