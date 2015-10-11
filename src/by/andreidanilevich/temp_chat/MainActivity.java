@@ -19,6 +19,10 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	// ИМЯ СЕРВЕРА (url зарегистрированного нами сайта)
+	// например http://l29340eb.bget.ru
+	String server_name = "http://l29340eb.bget.ru";
+
 	Spinner spinner_author, spinner_client;
 	String author, client;
 	Button open_chat_btn, open_chat_reverce_btn, delete_server_chat;
@@ -180,14 +184,12 @@ public class MainActivity extends Activity {
 		protected Integer doInBackground(Void... params) {
 
 			try {
-				URL url = new URL(
-						"http://andreidanilevich.comoj.com/chat.php?action=delete");
+				URL url = new URL(server_name + "/chat.php?action=delete");
 				conn = (HttpURLConnection) url.openConnection();
 				conn.setConnectTimeout(10000); // ждем 10сек
 				conn.setRequestMethod("POST");
 				conn.setRequestProperty("User-Agent", "Mozilla/5.0");
 				conn.connect();
-
 				res = conn.getResponseCode();
 				Log.i("chat", "+ MainActivity - ответ сервера (200 = ОК): "
 						+ res.toString());

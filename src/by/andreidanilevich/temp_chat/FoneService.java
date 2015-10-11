@@ -23,6 +23,10 @@ import android.util.Log;
 
 public class FoneService extends Service {
 
+	// ИМЯ СЕРВЕРА (url зарегистрированного нами сайта)
+	// например http://l29340eb.bget.ru
+	String server_name = "http://l29340eb.bget.ru";
+	
 	SQLiteDatabase chatDBlocal;
 	HttpURLConnection conn;
 	Cursor cursor;
@@ -97,13 +101,13 @@ public class FoneService extends Service {
 					if (cursor.moveToLast()) {
 						last_time = cursor.getLong(cursor
 								.getColumnIndex("data"));
-						lnk = "http://andreidanilevich.comoj.com/chat.php?action=select&data="
+						lnk = server_name + "/chat.php?action=select&data="
 								+ last_time.toString();
 
 						// если сообщений в БД нет - формируем запрос
 						// по которому получим всё
 					} else {
-						lnk = "http://andreidanilevich.comoj.com/chat.php?action=select";
+						lnk = server_name + "/chat.php?action=select";
 					}
 
 					cursor.close();

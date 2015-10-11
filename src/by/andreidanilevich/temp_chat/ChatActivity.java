@@ -28,6 +28,10 @@ import android.widget.Toast;
 
 public class ChatActivity extends Activity {
 
+	// ИМЯ СЕРВЕРА (url зарегистрированного нами сайта)
+	// например http://l29340eb.bget.ru
+	String server_name = "http://l29340eb.bget.ru";
+
 	ListView lv; // полоса сообщений
 	EditText et;
 	Button bt;
@@ -60,10 +64,6 @@ public class ChatActivity extends Activity {
 				Context.MODE_PRIVATE, null);
 		chatDBlocal
 				.execSQL("CREATE TABLE IF NOT EXISTS chat (_id integer primary key autoincrement, author, client, data, text)");
-
-		// отправим сообщение - обновить чат ListView
-		// sendBroadcast(new
-		// Intent("by.andreidanilevich.action.UPDATE_ListView"));
 
 		// Создаём и регистрируем широковещательный приёмник
 
@@ -164,7 +164,7 @@ public class ChatActivity extends Activity {
 
 			// кнопку сделаем неактивной
 			bt.setEnabled(false);
-			
+
 			// если чтото есть - действуем!
 			insert_to_chat = new INSERTtoChat();
 			insert_to_chat.execute();
@@ -187,7 +187,8 @@ public class ChatActivity extends Activity {
 			try {
 
 				// соберем линк для передачи новой строки
-				String post_url = "http://andreidanilevich.comoj.com/chat.php?action=insert&author="
+				String post_url = server_name
+						+ "/chat.php?action=insert&author="
 						+ URLEncoder.encode(author, "UTF-8")
 						+ "&client="
 						+ URLEncoder.encode(client, "UTF-8")
