@@ -1,5 +1,4 @@
 .classpath
-bin/
 .project
 gen/
 libs/
@@ -12,3 +11,12 @@ res/drawable-hdpi/ic_launcher.png
 res/drawable-mdpi/ic_launcher.png
 res/drawable-xhdpi/ic_launcher.png
 res/values/styles.xml
+bin/AndroidManifest.xml
+bin/classes/android/support/v7/appcompat/R$anim.class
+bin/classes/
+bin/res/crunch/
+bin/dexedLibs/android-support-v7-appcompat-acbd1baf4e392888b301292b74084465.jar
+bin/resources.ap_
+bin/R.txt
+bin/jarlist.cache
+bin/classes.dex
