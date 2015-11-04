@@ -18,19 +18,25 @@ p.s. как настроить "сервер"
 
   - создать SQL БД, а в ней таблицу (sql_table.txt)
   - изменить в файлах showBD.php и chat.php на свои полученные значения
+
       $mysql_host = "localhost"; // sql сервер, может быть локальным или внешним. например mysql5.000webhost.com
       $mysql_user = "l29340eb_chat"; // пользователь
       $mysql_password = "123456789"; // пароль
       $mysql_database = "l29340eb_chat"; // имя базы данных на сервере SQL
+
   - залить эти 2 файла в корень, пройти по ссылке на showBD.php - если пишет что база доступна - все ок
   - изменить путь к своему "серверу" в файлах
+
       ChatActivity.java
       FoneService.java
       MainActivity.java
+
   на
+
         // ИМЯ СЕРВЕРА (url зарегистрированного нами сайта)
         // например http://l29340eb.bget.ru
         String server_name = "http://l29340eb.bget.ru";
+
   все
 
 Если мой http://l29340eb.bget.ru/showBD.php еще жив, можно использовать готовый bin/temp_chat.apk
